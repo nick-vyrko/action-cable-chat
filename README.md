@@ -1,24 +1,20 @@
-# README
+## Chatty: The Rails 5.2.1 + Action Cable Example App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a really simple chatting app to demonstrate one implementation of Action Cable in a Rails 5 app. Users can sign up/log in with a username and create a chatroom or choose from an existing one to start real-time messaging.
 
-Things you may want to cover:
+The implementation uses multipe subscriptions to multiple chatrooms
 
-* Ruby version
+### Running Locally
 
-* System dependencies
+You'll need:
 
-* Configuration
+* Ruby 2.5.1
+* Postgres
+* Redis
 
-* Database creation
+Then, once you clone down this repo:
 
-* Database initialization
+* `bundle install`
+* `rake db:create; rake db:migrate`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+And you're all set.
