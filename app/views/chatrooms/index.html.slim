@@ -1,0 +1,6 @@
+h2 List of chatrooms
+.row
+  .col-12.chatroom-list
+    - @chatrooms.each do |chatroom|
+      .px-3
+        =link_to chatroom.topic, chatroom_path(chatroom)

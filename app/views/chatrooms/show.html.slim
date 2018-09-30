@@ -1,0 +1,9 @@
+.row
+  .col-12
+    #messages-list
+      - @messages.messages do |message|
+        .message-item
+          .name = message.user.name
+          .content = message.content
+.row
+  .col-12#message-form
