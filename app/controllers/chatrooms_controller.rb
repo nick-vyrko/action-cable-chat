@@ -8,8 +8,8 @@ class ChatroomsController < ApplicationController
   end
 
   def show
-    chatroom = Chatroom.find(params[:id])
-    @messages = chatroom.messages.includes(:user)
+    @chatroom = Chatroom.find(params[:id])
+    @messages = @chatroom.messages.includes(:user)
   end
 
   def new
