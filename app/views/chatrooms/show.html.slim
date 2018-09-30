@@ -1,7 +1,7 @@
 .row
   .col-12
     #messages-list
-      - @messages.messages do |message|
+      - @messages.each do |message|
         .message-item
           .name = message.user.name
           .content = message.content

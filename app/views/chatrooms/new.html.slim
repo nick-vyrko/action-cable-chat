@@ -1,0 +1,9 @@
+.row
+  = form_for( @chatroom , remote: true) do |f|
+    .form-group
+      label for="topic"
+        | Topic
+      = f.text_field :topic, class: "form-control"
+
+    = f.submit "Create", class: "btn btn-primary"
+
