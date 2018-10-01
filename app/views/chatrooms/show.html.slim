@@ -5,18 +5,18 @@
     = link_to "Back to list", chatrooms_path, class: "btn btn-link"
 .row
   .col-12
-    - if @messages.blank?
-      | No messages yet
-    - else
-      #messages_list
-        - @messages.each do |message|
-          .message-row
-            .message-item
-              .name = message.user.name
-              .content = message.content
+    #messages_list
+      - if @messages.blank?
+        .font-weight-light.text-center No messages yet
+      - else
+          - @messages.each do |message|
+            .message-row
+              .message-item
+                .name = message.user.name
+                .content = message.content
 .row.mt-3
   .col-12
     form#message_form data-chatroom-id="#{@chatroom.id}"
       .form-group
         label for="message" Your message
-        textarea#new_message.form-control rows="3" data-user-id="#{@user.id}" onkeypress="sendMessage(event, #{@chatroom.id})"
+        textarea#new_message.form-control rows="3" data-user-id="#{@user.id}" onkeydown="sendMessage(event, #{@chatroom.id})"

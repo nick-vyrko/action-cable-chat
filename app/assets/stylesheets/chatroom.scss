@@ -13,6 +13,15 @@
       border-radius: 5px;
       background-color: #a2c9f6;
       display: inline-block;
+
+      .name {
+        font-weight: 700;
+      }
+
+      .content {
+        white-space: pre-line;
+        margin-left: 1rem;
+      }
     }
   }
 }

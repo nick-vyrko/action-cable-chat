@@ -1,7 +1,17 @@
 function sendMessage(e, chatroomId) {
-  if(e.key === "Enter") {
+  if(e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+
     let textarea = e.currentTarget;
-    App.chatrooms[chatroomId].send({ user_id: textarea.dataset.userId, message: textarea.value });
+    const value = trimStr(textarea.value);
+    if (value) {
+      App.chatrooms[chatroomId].send({ user_id: textarea.dataset.userId, message: value });
+    }
+
+    textarea.value = "";
   }
-  // e.preventDefault();
 }
+
+const trimStr = (str) => (
+ str.trim().replace(/^\s+|\s+$/g,'')
+);
