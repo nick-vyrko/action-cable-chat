@@ -1,8 +1,10 @@
-## Chatty: The Rails 5.2.1 + Action Cable Example App
+## Chatty: The Rails 5.2 + Action Cable Example App
 
-This is a really simple chatting app to demonstrate one implementation of Action Cable in a Rails 5 app. Users can sign up/log in with a username and create a chatroom or choose from an existing one to start real-time messaging.
+This is a really simple chatting app to demonstrate one implementation of Action Cable in a Rails 5 app.
 
-The implementation uses multipe subscriptions to multiple chatrooms
+Authentication implemented by [device](https://github.com/plataformatec/devise). Users can sign up/log in with a username/email and create a chatroom or choose from an existing one to start real-time messaging.
+
+The implementation uses **multipe subscriptions** to multiple chatrooms
 
 ### Running Locally
 
