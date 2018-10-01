@@ -16,7 +16,7 @@
               .content = message.content
 .row.mt-3
   .col-12
-    form#message_form
+    form#message_form data-chatroom-id="#{@chatroom.id}"
       .form-group
         label for="message" Your message
-        textarea#new_message.form-control rows="3"
+        textarea#new_message.form-control rows="3" data-user-id="#{@user.id}" onkeypress="sendMessage(event, #{@chatroom.id})"

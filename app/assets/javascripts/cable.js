@@ -9,5 +9,5 @@
   this.App || (this.App = {});
 
   App.cable = ActionCable.createConsumer();
-
+  App.chatrooms = [];
 }).call(this);

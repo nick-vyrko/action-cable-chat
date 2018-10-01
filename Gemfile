@@ -22,6 +22,9 @@ gem 'turbolinks', '~> 5'
 # Authentication
 gem 'devise'
 
+# Serialization
+gem 'active_model_serializers', '~> 0.10.7'
+
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 
