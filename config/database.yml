@@ -6,6 +6,7 @@ default: &default
 development:
   <<: *default
   database: actioncable_chat_development
+  username: nickvyrko
   #username: actioncable_chat
   #password:
   #host: localhost

@@ -19,4 +19,4 @@
     form#message_form data-chatroom-id="#{@chatroom.id}"
       .form-group
         label for="message" Your message
-        textarea#new_message.form-control rows="3" data-user-id="#{@user.id}" onkeydown="sendMessage(event, #{@chatroom.id})"
+        textarea#new_message.form-control rows="3" data-user-id="#{@user.id}" onkeyup="sendMessage(event, #{@chatroom.id})"

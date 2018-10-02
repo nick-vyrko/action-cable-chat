@@ -29,3 +29,11 @@
 #new_message {
   resize: none;
 }
+
+#message_form {
+  .form-group .alert {
+    margin-top: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
